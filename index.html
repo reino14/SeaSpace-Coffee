@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body >
+<header class="fixed top-0 left-0 w-full z-50 bg-transparent px-4">
+  <div class="mx-auto max-w-screen-lg xl:max-w-screen-xl flex justify-between items-center h-20 relative">
+
+    <!-- Logo -->
+    <a href="#" class="flex items-center font-black z-50">
+      <img src="./img/logo.png" alt="Logo" class="w-16 sm:w-24" />
+    </a>
+
+    <!-- Hidden checkbox toggle -->
+    <input type="checkbox" id="navbar-open" class="peer hidden" />
+
+    <!-- Hamburger icon -->
+    <label for="navbar-open" class="cursor-pointer sm:hidden z-50">
+      <svg class="w-7 h-7 stroke-current text-white-purple" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </label>
+
+    <!-- Mobile nav -->
+    <nav
+      class=" fixed top-0 right-0 h-screen w-full bg-very-light-purple sm:bg-very-light-purple text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 sm:static sm:translate-x-0 sm:flex sm:items-center sm:h-auto sm:bg-transparent sm:w-auto sm:text-white z-40">
+      <ul class="flex flex-col gap-y-6 p-6 pt-24 sm:flex-row sm:gap-x-8 sm:p-0 sm:pt-0">
+        <li><a href="#home" class="text-white-purple hover:text-red-400 font-bold text-xs">HOME</a></li>
+        <li><a href="#event" class="text-white-purple hover:text-red-400 font-bold text-xs">PRODUCT</a></li>
+        <li><a href="#about" class="text-white-purple hover:text-red-400 font-bold text-xs">PROMO</a></li>
+        <li><a href="#story" class="text-white-purple hover:text-red-400 font-bold text-xs">OUR STORY</a></li>
+        <li><a href="#cafe" class="text-white-purple hover:text-red-400 font-bold text-xs">OUR CAFE</a></li>
+        <li><a href="#news" class="text-white-purple hover:text-red-400 font-bold text-xs">NEWS</a></li>
+        <li><a href="#contact" class="text-white-purple hover:text-red-400 font-bold text-xs">CONTACT</a></li>
+      </ul>
+      <img src="./img/wave.png" alt="ombak" class=" sm:hidden absolute w-96 bottom-0">
+    </nav>
+  </div>
+</header>
+
+    <section class="relative h-screen overflow-hidden">
+    <!-- Background blur layer -->
+    <div class="absolute inset-0 z-0 bg-custom backdrop-blur-md"></div>
+
+    <!-- Foreground content -->
+    <div id="parallax-container" class="relative z-10 h-full">
+        <div id="left-img" class="absolute bottom-0 left-custom transition-all duration-300">
+        <img
+            class="w-40 sm:w-60 lg:w-80 2xl:w-96"
+            src="./img/tangan-kiri.png"
+            alt="gambar kopi kiri"
+        />
+        </div>
+
+        <div id="right-img" class="absolute bottom-0 right-custom transition-all duration-300">
+        <img
+            class="w-36 sm:w-48 lg:w-60 2xl:w-80"
+            src="./img/tangan-kanan.png"
+            alt="gambar kopi kanan"
+        />
+        </div>
+
+        <div id="wave" class="absolute bottom-0 -left-40 transition-all duration-300">
+        <img
+            class="w-custom"
+            src="./img/wave.png"
+            alt="gambar kopi kanan"
+        />
+        </div>
+
+        <div id="wave" class="absolute bottom-0 -right-40 transition-all duration-300">
+        <img
+            class="w-custom"
+            src="./img/wave-right.png"
+            alt="gambar kopi kanan"
+        />
+        </div>
+
+        <div id="harga"
+            class="absolute left-[53%] top-1/2 -translate-y-1/2 transition-all duration-300">
+        <img
+            class="w-40"
+            src="./img/harga.png"
+            alt="gambar kopi kanan"
+        />
+        </div>
+
+
+    </div>
+    </div>
+    </section>
+
+
+    <div class="bg-blue h-screen">
+    <!-- Section berikutnya biar bisa scroll -->
+     <h1>HALO</h1>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

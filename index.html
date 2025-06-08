@@ -97,13 +97,127 @@
     </section>
 
 
-    <div class="bg-blue h-screen">
-    <!-- Section berikutnya biar bisa scroll -->
-     <h1>HALO</h1>
+  <!------------------------------------------------------------------FOOTER------------------------------------------------------------------>
+  <footer id="contacts" class="bg-very-light-purple text-white py-8 px-6 gap-y-4  rounded-t-2xl pr-16 sm:pr-5">
+
+    <!--MOBILE-->
+    <div class="md:row-span-2 md:col-span-1 sm:hidden block">
+      <img class="w-32 sm:w-48 sm:h-48" src="./img/logo2.png" alt="" />
+    </div>
+    <div class="sm:hidden flex flex-col py-2">
+      <p class="text-white text-justify text-xs">Jl. Sempur No.23, RT.03/RW.01, Sempur, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16129</p>
     </div>
 
+      <iframe class="sm:hidden block"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.46487959178!2d106.79710301068792!3d-6.588993393377171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c500370e2437%3A0x127b13e1c70bd231!2sSea%20Space%20Coffee!5e0!3m2!1sid!2sid!4v1749351587155!5m2!1sid!2sid" 
+      width="100%" 
+      height="150" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <div class="sm:hidden block flex flex-row justify-between gap-6 mt-5 text-xs">
+      <!-- links -->
+      <div class="w-1/2">
+        <h3 class="text-white mb-2">Links</h3>
+        <div class="space-y-1">
+          <a href="#about" class="text-slate-400 block">About</a>
+          <a href="#product" class="text-slate-400 block">Our Products</a>
+          <a href="#contacts" class="text-slate-400 block">Contacts</a>
+          <a href="" class="text-slate-400 block">Email</a>
+          <a href="" class="text-slate-400 block">WhatsApp</a>
+          <a href="" class="text-slate-400 block">Email</a>
+        </div>
+      </div>
+
+      <!-- support -->
+      <div class="w-1/2">
+        <h3 class="text-white mb-2">Support</h3>
+        <div class="space-y-1">
+          <a href="" class="text-slate-400 block">Email</a>
+          <a href="" class="text-slate-400 block">WhatsApp</a>
+        </div>
+        <h3 class="text-white mb-2 mt-3">Social Media</h3>
+        <div class="space-y-1">
+          <a href="" class="text-slate-400 block">Email</a>
+          <a href="" class="text-slate-400 block">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+      <!-- Divider dan copyright -->
+      <hr class="block sm:hidden max-w-screen-xl mx-auto border-t border-gray-300 mt-8" />
+      <div class="block sm:hidden text-sm text-white mt-4 mb-6">
+          Copyright &copy; 2025 SeaSpace Coffee
+      </div>
 
 
-    <script src="script.js"></script>
+    <!--DESKTOP-->
+      
+        <!-- Bagian paling luar sudah ok -->
+         <div class="hidden sm:block max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
+            <img class="w-32 sm:w-24 sm:h-24" src="./img/logo2.png" alt="" />
+         </div>
+        <div class="max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
+
+          <!-- Kolom 1: Alamat dan Map -->
+          <div class="hidden sm:flex flex-col col-span-2">
+            
+            <p class="text-white text-xs text-justify mb-4 leading-relaxed">
+              Jl. Sempur No.23, RT.03/RW.01, Sempur, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16129
+            </p>
+            <iframe 
+              class="w-full h-32 rounded-md" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.46487959178!2d106.79710301068792!3d-6.588993393377171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c500370e2437%3A0x127b13e1c70bd231!2sSea%20Space%20Coffee!5e0!3m2!1sid!2sid!4v1749351587155!5m2!1sid!2sid" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+
+          <!-- Kolom 2–4: Support Links -->
+          <div class="mt-10 sm:mt-0 hidden sm:block pl-6">
+            <h3 class="text-white font-semibold mb-2">NAVIGATION</h3>
+            <a href="#about" class="text-slate-400 hover:text-white">Home</a><br />
+            <a href="#product" class="text-slate-400 hover:text-white">Products</a><br />
+            <a href="#contacts" class="text-slate-400 hover:text-white">Promo</a><br />
+            <a href="#contacts" class="text-slate-400 hover:text-white">Our Story</a><br />
+          </div>
+
+          <div class="mt-10 sm:mt-0 hidden sm:block  PL-6">
+            <h3 class="text-white font-semibold mb-2">MORE</h3>
+            <a href="#about" class="text-slate-400 hover:text-white">Our Cafe</a><br />
+            <a href="#product" class="text-slate-400 hover:text-white">News</a><br />
+            <a href="#contacts" class="text-slate-400 hover:text-white">Contacts</a>
+          </div>
+
+          <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
+            <h3 class="text-white font-semibold mb-2">SUPPORT</h3>
+            <a href="#about" class="text-slate-400 hover:text-white">Email</a><br />
+            <a href="#product" class="text-slate-400 hover:text-white">WhatsApp</a><br />
+          </div>
+
+          <!-- Kolom 5: Kebijakan -->
+          <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
+            <h3 class="text-white font-semibold mb-2">SOCIAL MEDIA</h3>
+            <a href="#" class="text-slate-400 hover:text-white">seaspace.coffee</a><br />
+            <a href="#" class="text-slate-400 hover:text-white">seaspace.coffee</a><br />
+          </div>
+        </div>
+
+        <!-- Divider dan copyright -->
+        <hr class="hidden sm:block max-w-screen-xl mx-auto border-t border-gray-300 mt-8" />
+        <div class="hidden sm:block text-center text-sm text-white mt-4 mb-6">
+          Copyright &copy; 2025 SeaSpace Coffee
+        </div>
+
+  </footer>
+
+
+
+  <script src="script.js"></script>
 </body>
 </html>

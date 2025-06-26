@@ -6,6 +6,12 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body >
 <header class="fixed top-0 left-0 w-full z-50 bg-transparent px-4">
@@ -31,20 +37,20 @@
     <nav
       class=" fixed top-0 right-0 h-screen w-full bg-very-light-purple sm:bg-very-light-purple text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 sm:static sm:translate-x-0 sm:flex sm:items-center sm:h-auto sm:bg-transparent sm:w-auto sm:text-white z-40">
       <ul class="flex flex-col gap-y-6 p-6 pt-24 sm:flex-row sm:gap-x-8 sm:p-0 sm:pt-0">
-        <li><a href="#home" class="text-white-purple hover:text-red-400 font-bold text-xs">HOME</a></li>
-        <li><a href="#event" class="text-white-purple hover:text-red-400 font-bold text-xs">PRODUCT</a></li>
-        <li><a href="#about" class="text-white-purple hover:text-red-400 font-bold text-xs">PROMO</a></li>
-        <li><a href="#story" class="text-white-purple hover:text-red-400 font-bold text-xs">OUR STORY</a></li>
-        <li><a href="#cafe" class="text-white-purple hover:text-red-400 font-bold text-xs">OUR CAFE</a></li>
-        <li><a href="#news" class="text-white-purple hover:text-red-400 font-bold text-xs">NEWS</a></li>
-        <li><a href="#contact" class="text-white-purple hover:text-red-400 font-bold text-xs">CONTACT</a></li>
+        <li><a href="#home" class="text-white-purple hover:text-indigo-600 transition-all duration-400 font-bold text-xs">HOME</a></li>
+        <li><a href="#news" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">PROMO</a></li>
+        <li><a href="#products" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">PRODCUTS</a></li>
+        <li><a href="#story" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">OUR STORY</a></li>
+        <li><a href="#cafe" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">OUR CAFE</a></li>
+        <li><a href="#testimonial" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">REVIEW</a></li>
+        <li><a href="#contact" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">CONTACT</a></li>
       </ul>
       <img src="./img/wave.png" alt="ombak" class=" sm:hidden absolute w-96 bottom-0">
     </nav>
   </div>
 </header>
-
-    <section class="relative h-screen overflow-hidden">
+  <!------------------------------------------------------------------HOME------------------------------------------------------------------>
+    <section class="relative h-screen overflow-hidden" id="home">
     <!-- Background blur layer -->
     <div class="absolute inset-0 z-0 bg-custom backdrop-blur-md"></div>
 
@@ -81,24 +87,487 @@
             alt="gambar kopi kanan"
         />
         </div>
-
-        <div id="harga"
-            class="absolute left-[53%] top-1/2 -translate-y-1/2 transition-all duration-300">
-        <img
-            class="w-40"
-            src="./img/harga.png"
-            alt="gambar kopi kanan"
-        />
-        </div>
-
-
     </div>
     </div>
     </section>
 
+         <!------------------------------------------------------------------PROMO------------------------------------------------------------------>
+    <section id="promo" class="w-full py-0" >
+      <!-- Banner News -->
+      <div class="w-full relative">
+        <img src="./img/bg-home2.png" alt="News Banner" class="w-full h-36 object-cover object-center rounded-b-3xl">
+        <div class="absolute inset-0 bg-[#2C2E83]/80 flex items-center justify-center">
+          <h2 class="text-white text-3xl  sm:text-4xl lg:text-6xl font-extrabold md:pl-8 drop-shadow-lg tracking-wide" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em;">LATEST PROMO!</h2>
+        </div>
+      </div>
+      <!-- Grid News Card -->
+      <div class="max-w-screen-lg mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-2xl shadow p-2 flex flex-col border border-gray-200">
+            <img src="./img/poster-1.png" alt="news1" class="rounded-t-2xl w-full h-cover object-cover mb-2">
+            <div class="px-2 pb-2 flex-1 flex flex-col">
+              <h3 class="font-bold text-base text-black mb-1 leading-tight">Paket “Ngopi Pagi” hanya 25K bisa Nikmatin Donut Kampung dengan Bonus Minum</h3>
+              <p class="text-gray-500 text-sm mb-2 flex-1">Masih Pagi Enaknya Ngopi, Jangan Lupa Donut Kampungnya Juga!</p>
+              <span class="text-xs text-gray-400">14 April 2025</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white rounded-2xl shadow p-2 flex flex-col border border-gray-200">
+            <img src="./img/poster-2.png" alt="news2" class="rounded-t-2xl w-full h-86 object-cover mb-2">
+            <div class="px-2 pb-2 flex-1 flex flex-col">
+              <h3 class="font-bold text-base text-black mb-1 leading-tight">Seaspace Nyediain Bundling Es Coklat Dengan Donut Kentang Cuman 25k!</h3>
+              <p class="text-gray-500 text-sm mb-2 flex-1">Kombinasi Paling Cocok Antara Es Coklat Dengan Donut Kentang, Ayo Buru Beli!</p>
+              <span class="text-xs text-gray-400">24 Maret 2025</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white rounded-2xl shadow p-2 flex flex-col border border-gray-200">
+            <img src="./img/poster-3.png" alt="news3" class="rounded-t-2xl w-full h-cover object-cover mb-2">
+            <div class="px-2 pb-2 flex-1 flex flex-col">
+              <h3 class="font-bold text-base text-black mb-1 leading-tight">Lagi Ada Acara Night Run Di SeaSpace Untuk Umum, Jangan Lupa Datang!</h3>
+              <p class="text-gray-500 text-sm mb-2 flex-1">Buat Sobat Sea Space Yang Hobinya Lari Harus Banget Nih Ramein, Buruan Dateng!</p>
+              <span class="text-xs text-gray-400">21 Maret 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION NEWS END -->
+
+      <!------------------------------------------------------------------PRODUCTS------------------------------------------------------------------>
+    <section class="w-full py-8 pt-16 pb-28 bg-[url('./img/bg-home2.png')] bg-center bg-cover bg-no-repeat" id="products">
+      <div class="swiper mySwiper">
+        <div class="flex justify-center mb-10">
+          <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-3xl">
+              Best Seller!
+          </h1>
+        </div>
+
+        <div class="swiper-wrapper">
+          <!-- Ganti isi per-slide sesuai kebutuhan -->
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/chocolate-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+              <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
+                  Chocolate SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/lemontea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+              <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
+                  Lemontea SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/kopsus-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+              <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
+                  Kopi Susu SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/greentea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+              <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
+                  Greentea SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/blackforest-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+              <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
+                  Blackforest SeaSpace
+              </h1>
+          </div>
+                    <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/chocolate-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+              <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
+                  Chocolate SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/lemontea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+              <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
+                  Lemontea SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/kopsus-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+              <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
+                  Kopi Susu SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/greentea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+              <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
+                  Greentea SeaSpace
+              </h1>
+          </div>
+
+          <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
+            <img src="./img/blackforest-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+              <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
+                  Blackforest SeaSpace
+              </h1>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next w-10 text-blue-900 bg-white/50 rounded-full p-8 hover:bg-white/70 transition"></div>
+        <div class="swiper-button-prev w-10 text-blue-900 bg-white/50 rounded-full p-8 hover:bg-white/70 transition"></div>
+      </div>
+    </section>
+
+  <!------------------------------------------------------------------MENU PRODUCTS------------------------------------------------------------------>
+    <!-- SECTION DAFTAR MENU & FILTER START -->
+    <section class="py-10 ">
+      <div class="max-w-screen-xl mx-auto px-4 flex flex-col md:flex-row gap-3">
+        <!-- Tombol Filter (mobile only) -->
+        <button id="filter-toggle" class="block md:hidden bg-transparent text-[#2C2E83] font-bold px-0 py-2 rounded-xl mb-2 w-full text-lg flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 6h16M8 12h8M10 18h4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Filter
+        </button>
+        <!-- Pop up filter mobile -->
+        <div id="filter-popup" class="fixed inset-0 z-50 hidden md:hidden">
+          <div class="bg-white h-full w-4/5 max-w-xs shadow-xl rounded-r-2xl p-6 relative animate-slideInLeft">
+            <button id="filter-close" class="absolute top-4 right-4 text-[#2C2E83] text-3xl font-bold z-10">&times;</button>
+            <div class="flex items-center gap-2 mb-4 text-[#2C2E83] font-bold">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+              <span>Filter</span>
+            </div>
+            <div class="font-bold text-lg mb-2 text-[#2C2E83]">Variant</div>
+            <ul class="space-y-2 text-[#2C2E83]">
+              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="all" checked>All Variant</label></li>
+              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="coffee">Coffee</label></li>
+              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="milk">Milk Base</label></li>
+              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="signature">Signature</label></li>
+              <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#2C2E83]" value="tea">Tea & Mocktails</label></li>
+            </ul>
+          </div>
+        </div>
+        <!-- Sidebar filter desktop -->
+        <aside class="menu-filter-aside hidden md:block">
+          <div class="flex items-center gap-2 mb-4 text-[#ffffff] font-bold">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h8m-8 6h16"></path></svg>
+            <span>Filter</span>
+          </div>
+          <div class="font-bold text-lg mb-2 text-[#ffffff]">Variant</div>
+          <ul class="space-y-2 text-[#ffffff]">
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="all" checked>All Variant</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="coffee">Coffee</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="milk">Milk Base</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="signature">Signature</label></li>
+            <li><label class="flex items-center gap-2"><input type="checkbox" class="filter-checkbox accent-[#ffffff]" value="tea">Tea & Mocktails</label></li>
+          </ul>
+        </aside>
+        <!-- Menu Grid -->
+        <div class="flex-1 md:order-2 order-1">
+          <div class="bg-[#2C2E83] rounded-3xl p-6">
+            <h2 class="text-white font-bold text-2xl mb-6" id="menu-title">Coffee</h2>
+            <div id="menu-grid" class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
+              <!-- Card 1 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee,milk">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/kopsus.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Kopi <br> Susu</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">9</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white  text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/chocolate.png" alt="Chocolate" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Choco <br> late</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">15</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="signature">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/blackforest.png" alt="Blackforest" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Black <br> forest</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">18</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 4 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/greentea.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Green<br>Tea</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">17</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/lemontea.png" alt="Lemon Tea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Lemon<br>Tea</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">14</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 6 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/blueocean.png" alt="Blue Ocean" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Ocean<br>Blue</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">20</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 7 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/americano.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Ameri<br>cano</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">15</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 8 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/soon.png" alt="Red Velvet" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Red<br>Velvet</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">15</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 9 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/soon.png" alt="Passion Fruit" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm text-lg mt-1">Passion<br>Fruit</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">14</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+              </div>
+              <!-- Card 10 -->
+              <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
+                <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
+                  <img src="./img/soon.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <div class="flex w-full justify-between items-end mt-1">
+                    <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Sea<br>Salt</span>
+                    <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
+                      <span class="text-xs align-bottom">Rp</span>
+                      <span class="text-base text-lg lg:text-2xl leading-none">18</span>
+                      <span class="text-xs align-bottom">rb</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  Kopi susu dengan sentuhan manis alami gula aren. Nikmat, lembut, dan khas!<br>~MinSea~
+                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------------------------------------------OUR STORY------------------------------------------------------------------>
+    <div class="flex justify-center flex-col items-center md:px-40 mb-4" id="story">
+      <img src="./img/judul-story.png" alt="" class="w-64 md:w-96 mb-1 pt-20">
+        <p class="text-center text-xs md:text-lg">
+          The Journey of SeaSpace and Our Passion for Coffee</p>
+    </div>
+    <section class="w-full min-h-[100px] flex flex-col md:flex-row items-center p-4 gap-8 lg:px-28 text-justify mb-14">
+      <!-- Left: background image -->
+      <div class="bg-ourstory w-full md:w-1/2 h-80 rounded-3xl flex items-center justify-center">
+      </div>
+
+      <!-- Right: paragraf -->
+      <div class="w-full md:w-1/2 flex flex-col justify-center p-6 space-y-4 text-[#2C2E83] mt-10 text-sm md:text-lg">
+        <p>Seaspace lahir dari kegelisahan akan harga kopi yang makin tinggi. Kami percaya kopi harusnya bisa dinikmati semua orang, bukan hanya soal rasa, tapi juga suasana.</p>
+        <p>Dengan harga mulai dari <span class="text-[#6C7CD6] font-medium">Rp9.000</span>, Seaspace hadir sebagai tempat yang terinspirasi dari laut: tenang, indah, dan terbuka untuk siapa saja. Di sini, kopi bukan hanya minuman, tapi alasan untuk bertemu, berbincang, dan merasa pulang.</p>
+        <div>
+          <button class="bg-very-light-purple py-2 px-4 text-base rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300"><a href="https://www.instagram.com/seaspace.coffee/">Visit Us</a></button>
+        </div>
+      </div>
+    </section>
+    <div class="border-t border-gray-300 w-3/4 mx-auto mb-20"></div>
+
+    <!------------------------------------------------------------------OUR CAFE------------------------------------------------------------------>
+    <section class="px-10 md:px-5 mb-20" id="cafe">
+      <div class="flex justify-center flex-col items-center md:px-72">
+        <img src="./img/judul-cafe.png" alt="" class="w-40 md:w-64 mb-1 pt-10">
+        <p class="text-center text-xs md:text-lg">
+          We currently have two cafes located at Sempur & Salak </p>
+      </div>
+
+      <div>
+        <div class="md:flex md:flex-row flex-col justify-center gap-x-28 pt-10">
+          <div class="flex flex-col items-center relative group">
+            <!-- Teks di atas gambar -->
+            <span class="absolute inset-0 flex text-center items-center justify-center text-white font-bold text-lg md:text-2xl bottom-20 blink-text">
+              Sea Space <br> Sempur
+            </span>
+
+            <!-- Gambar -->
+            <img src="./img/cafe-1.png" alt="" width="350px">
+
+            <!-- Button -->
+            <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300">
+              <a href="https://maps.app.goo.gl/wij61xpsCmaGKXycA">Visit Cafe</a>
+            </button>
+          </div>
+
+
+
+          <div class="flex flex-col items-center relative group">
+            <!-- Teks di atas gambar -->
+            <span class="absolute inset-0 flex text-center items-center justify-center text-white font-bold text-lg md:text-2xl bottom-20 blink-text">
+              Sea Space <br> Salak
+            </span>
+
+            <!-- Gambar -->
+            <img src="./img/cafe-2.png" alt="" width="350px">
+
+            <!-- Button -->
+            <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300">
+              <a href="https://maps.app.goo.gl/FooHFbonUbYJkmHbA">Visit Cafe</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="border-t border-gray-300 w-3/4 mx-auto mb-10"></div>
+
+
+
+    <!------------------------------------------------------------------TESTIMONIAL------------------------------------------------------------------>
+    <div class="flex justify-center flex-col items-center md:px-40" id="testimonial">
+      <img src="./img/judul-testimoni.png" alt="" class="w-64 md:w-96 pt-20">
+        <p class="text-center text-xs md:text-lg mt-1">
+          What Our Customer Has To Say About SeaSpace</p>
+    </div>
+    <section class="w-full bg-[#F5F6FF] py-12">
+      <div class="max-w-screen-lg md:max-w-screen-lg mx-auto px-8">
+        <div class="relative">
+          <div class=" bg-very-light-purple rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between relative overflow-hidden min-h-[480px] md:min-h-[410px]">
+            <!-- Ornamen kiri bawah -->
+            <img src="./img/bg-testi.png" alt="ornamen" class="absolute left-0 bottom-0 w-1/3 min-w-[120px] max-w-[520px] opacity-60 pointer-events-none select-none" style="z-index:1;">
+            <!-- Tombol panah kiri -->
+            <button id="testimonial-left" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/60 hover:bg-white text-[#5B4DC2] rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+            <!-- Konten kiri: judul dan kutipan -->
+            <div class="flex-1 text-justify z-10 lg:ml-10">
+              <h2 class="text-xl md:text-3xl font-bold text-white mb-6"><span class="font-extrabold">Kata</span> mereka</h2>
+              <p id="testimonial-quote" class="text-white text-sm md:text-lg leading-relaxed mb-4 lg:mr-20"></p>
+            </div>
+            <!-- Konten kanan: foto profil dan nama -->
+            <div class="flex flex-col items-center z-10 mt-8 md:mt-0 md:ml-16 md:mr-10">
+              <div class="w-32 h-32 md:w-56 md:h-56 rounded-full border-white flex items-center justify-center overflow-hidden bg-white">
+                <img id="testimonial-img" src="" alt="Foto Testimoni" class="w-full h-full object-cover rounded-full">
+              </div>
+              <div class="bg-white rounded-xl px-6 py-3 shadow text-center">
+                <div id="testimonial-name" class="font-bold text-[#2C2E83] text-lg md:text-xl"></div>
+                <div id="testimonial-role" class="text-[#5B4DC2] text-base md:text-lg"></div>
+              </div>
+            </div>
+            <!-- Tombol panah kanan -->
+            <button id="testimonial-right" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/60 hover:bg-white text-[#5B4DC2] rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+          </div>
+          <!-- Dot Pagination -->
+          <div class="flex justify-center mt-8 gap-3" id="testimonial-dots"></div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION TESTIMONI END -->
+
 
   <!------------------------------------------------------------------FOOTER------------------------------------------------------------------>
-  <footer id="contacts" class="bg-very-light-purple text-white py-8 px-6 gap-y-4  rounded-t-2xl pr-16 sm:pr-5">
+  <footer id="contact" class="bg-very-light-purple text-white py-8 px-6 gap-y-4  rounded-t-2xl pr-16 sm:pr-5">
 
     <!--MOBILE-->
     <div class="md:row-span-2 md:col-span-1 sm:hidden block">
@@ -121,28 +590,27 @@
     <div class="sm:hidden block flex flex-row justify-between gap-6 mt-5 text-xs">
       <!-- links -->
       <div class="w-1/2">
-        <h3 class="text-white mb-2">Links</h3>
+        <h3 class="text-white mb-2 font-semibold">Navigation</h3>
         <div class="space-y-1">
-          <a href="#about" class="text-slate-400 block">About</a>
-          <a href="#product" class="text-slate-400 block">Our Products</a>
-          <a href="#contacts" class="text-slate-400 block">Contacts</a>
-          <a href="" class="text-slate-400 block">Email</a>
-          <a href="" class="text-slate-400 block">WhatsApp</a>
-          <a href="" class="text-slate-400 block">Email</a>
+          <a href="#home" class="text-slate-400 block">Home</a>
+          <a href="#promo" class="text-slate-400 block">Promo</a>
+          <a href="#products" class="text-slate-400 block">Products</a>
+          <a href="#story" class="text-slate-400 block">Story</a>
+          <a href="#cafe" class="text-slate-400 block">Cafe</a>
+          <a href="#testimonial" class="text-slate-400 block">Review</a>
         </div>
       </div>
 
       <!-- support -->
       <div class="w-1/2">
-        <h3 class="text-white mb-2">Support</h3>
+        <h3 class="text-white mb-2 font-semibold">Support</h3>
         <div class="space-y-1">
-          <a href="" class="text-slate-400 block">Email</a>
-          <a href="" class="text-slate-400 block">WhatsApp</a>
+          <a href="mailto:reino.aimar14@gmail.com" class="text-slate-400 block">Email</a>
+          <a href="https://wa.me/+6285694014009" class="text-slate-400 block">WhatsApp</a>
         </div>
-        <h3 class="text-white mb-2 mt-3">Social Media</h3>
+        <h3 class="text-white mb-2 mt-3 font-semibold">Social Media</h3>
         <div class="space-y-1">
-          <a href="" class="text-slate-400 block">Email</a>
-          <a href="" class="text-slate-400 block">WhatsApp</a>
+          <a href="https://www.instagram.com/seaspace.coffee/" class="text-slate-400 block">seaspace.coffee</a>
         </div>
       </div>
     </div>
@@ -182,29 +650,27 @@
           <div class="mt-10 sm:mt-0 hidden sm:block pl-6">
             <h3 class="text-white font-semibold mb-2">NAVIGATION</h3>
             <a href="#about" class="text-slate-400 hover:text-white">Home</a><br />
-            <a href="#product" class="text-slate-400 hover:text-white">Products</a><br />
-            <a href="#contacts" class="text-slate-400 hover:text-white">Promo</a><br />
-            <a href="#contacts" class="text-slate-400 hover:text-white">Our Story</a><br />
+            <a href="#promo" class="text-slate-400 hover:text-white">Promo</a><br />
+            <a href="#products" class="text-slate-400 hover:text-white">Products</a><br />
+            <a href="#story" class="text-slate-400 hover:text-white">Our Story</a><br />
           </div>
 
           <div class="mt-10 sm:mt-0 hidden sm:block  PL-6">
             <h3 class="text-white font-semibold mb-2">MORE</h3>
-            <a href="#about" class="text-slate-400 hover:text-white">Our Cafe</a><br />
-            <a href="#product" class="text-slate-400 hover:text-white">News</a><br />
-            <a href="#contacts" class="text-slate-400 hover:text-white">Contacts</a>
+            <a href="#cafe" class="text-slate-400 hover:text-white">Our Cafe</a><br />
+            <a href="#testimonial" class="text-slate-400 hover:text-white">Review</a><br />
           </div>
 
           <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
             <h3 class="text-white font-semibold mb-2">SUPPORT</h3>
-            <a href="#about" class="text-slate-400 hover:text-white">Email</a><br />
-            <a href="#product" class="text-slate-400 hover:text-white">WhatsApp</a><br />
+            <a href="mailto:reino.aimar14@gmail.com" class="text-slate-400 hover:text-white">Email</a><br />
+            <a href="https://wa.me/+6285694014009" class="text-slate-400 hover:text-white">WhatsApp</a><br />
           </div>
 
           <!-- Kolom 5: Kebijakan -->
           <div class="mt-10 sm:mt-0 hidden sm:block PL-6">
             <h3 class="text-white font-semibold mb-2">SOCIAL MEDIA</h3>
-            <a href="#" class="text-slate-400 hover:text-white">seaspace.coffee</a><br />
-            <a href="#" class="text-slate-400 hover:text-white">seaspace.coffee</a><br />
+            <a href="https://www.instagram.com/seaspace.coffee/" class="text-slate-400 hover:text-white">seaspace.coffee</a><br />
           </div>
         </div>
 
@@ -213,7 +679,6 @@
         <div class="hidden sm:block text-center text-sm text-white mt-4 mb-6">
           Copyright &copy; 2025 SeaSpace Coffee
         </div>
-
   </footer>
 
 

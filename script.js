@@ -38,16 +38,159 @@ window.addEventListener('scroll', () => {
   rightImage.style.right = `${baseOffset - step * stepOffset}px`;
 });
 
-// Parallax ilang harga
-const wave = document.getElementById('harga');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-
-  if (scrollY > 100) {
-    // ubah 100 sesuai kapan efek ingin muncul
-    wave.classList.add('translate-x-32', 'opacity-0');
-  } else {
-    wave.classList.remove('translate-x-32', 'opacity-0');
-  }
+// ==========================SLIDER DAFTAR MENU BEST SELLER=====================
+var swiper = new Swiper('.mySwiper', {
+  slidesPerView: 5, // jumlah card per layar
+  spaceBetween: 16, // jarak antar kartu
+  centeredSlides: false,
+  loop: true, // infinite
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    1440: { slidesPerView: 5 },
+    1024: {slidesPerView: 4},
+    640: { slidesPerView: 2 },
+    0: { slidesPerView: 1 },
+  },
 });
+
+// ==========================PRODUCTS FILTER=====================
+document.addEventListener("DOMContentLoaded", function () {
+  const filterCheckboxes = document.querySelectorAll(".filter-checkbox");
+  const menuGrid = document.getElementById("menu-grid");
+  const menuTitle = document.getElementById("menu-title");
+  const menuCards = Array.from(menuGrid.children);
+
+  // Data menu (contoh)
+  const menuData = {
+    coffee: "Coffee",
+    milk: "Milk Base",
+    signature: "Signature",
+    tea: "Tea & Mocktails",
+  };
+
+  function updateMenu() {
+    const checkedFilters = Array.from(filterCheckboxes)
+      .filter((cb) => cb.checked && cb.value !== "all")
+      .map((cb) => cb.value);
+
+    // Update judul
+    if (checkedFilters.length === 0 || filterCheckboxes[0].checked) {
+      menuTitle.textContent = "All Variants";
+    } else {
+      menuTitle.textContent = checkedFilters.map((val) => menuData[val]).join(" & ");
+    }
+
+    // Update card yang ditampilkan
+    menuCards.forEach((card) => {
+      const categories = card.dataset.category.split(",");
+      const isVisible = filterCheckboxes[0].checked || checkedFilters.length === 0 || checkedFilters.some((filter) => categories.includes(filter));
+      card.style.display = isVisible ? "" : "none";
+    });
+  }
+
+  filterCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", function () {
+      if (this.value === "all" && this.checked) {
+        filterCheckboxes.forEach((cb) => {
+          if (cb !== this) cb.checked = false;
+        });
+      } else if (this.value !== "all" && this.checked) {
+        filterCheckboxes[0].checked = false;
+      }
+      updateMenu();
+    });
+  });
+
+  // Mobile filter popup
+  const filterToggle = document.getElementById("filter-toggle");
+  const filterPopup = document.getElementById("filter-popup");
+  const filterClose = document.getElementById("filter-close");
+
+  if (filterToggle) {
+    filterToggle.addEventListener("click", () => {
+      filterPopup.classList.add("active");
+      filterPopup.classList.remove("hidden");
+    });
+  }
+
+  if (filterClose) {
+    filterClose.addEventListener("click", () => {
+      filterPopup.classList.remove("active");
+      // Beri jeda sebelum menyembunyikan agar animasi selesai
+      setTimeout(() => filterPopup.classList.add("hidden"), 300);
+    });
+  }
+
+  // Inisialisasi tampilan awal
+  updateMenu();
+});
+
+// ==========================TESTIMONIAL SLIDER===============================
+// Data testimoni
+const testimonials = [
+  {
+    quote:
+      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ."',
+    img: "./img/testi-ariel.png",
+    name: "Ariel Ramaditya",
+    role: "CEO of Seaspace",
+  },
+  {
+    quote: "Kopinya enak, suasananya bikin betah. Pelayanan ramah banget!",
+    img: "./img/testi-ahlan.png",
+    name: "Ahlan Purba",
+    role: "CEO of Seaspace",
+  },
+];
+let currentTesti = 0;
+
+function showTestimonial(idx) {
+  const quoteEl = document.getElementById("testimonial-quote");
+  const imgEl = document.getElementById("testimonial-img");
+  const nameEl = document.getElementById("testimonial-name");
+  const roleEl = document.getElementById("testimonial-role");
+  const dotsContainer = document.getElementById("testimonial-dots");
+  if (!quoteEl || !imgEl || !nameEl || !roleEl || !dotsContainer) return;
+  const t = testimonials[idx];
+  quoteEl.textContent = t.quote;
+  imgEl.src = t.img;
+  nameEl.textContent = t.name;
+  roleEl.textContent = t.role;
+  updateDots();
+}
+
+function updateDots() {
+  const dotsContainer = document.getElementById("testimonial-dots");
+  if (!dotsContainer) return;
+  dotsContainer.innerHTML = "";
+  testimonials.forEach((_, i) => {
+    const dot = document.createElement("button");
+    dot.className = "w-4 h-4 rounded-full mx-1 transition-all duration-200 " + (i === currentTesti ? "bg-[#2C2E83]" : "bg-[#A3A8F0] opacity-80");
+    dot.addEventListener("click", () => {
+      currentTesti = i;
+      showTestimonial(i);
+    });
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function setupTestimonialSlider() {
+  const btnLeft = document.getElementById("testimonial-left");
+  const btnRight = document.getElementById("testimonial-right");
+  if (!btnLeft || !btnRight) return;
+  btnLeft.addEventListener("click", () => {
+    currentTesti = (currentTesti - 1 + testimonials.length) % testimonials.length;
+    showTestimonial(currentTesti);
+  });
+  btnRight.addEventListener("click", () => {
+    currentTesti = (currentTesti + 1) % testimonials.length;
+    showTestimonial(currentTesti);
+  });
+  showTestimonial(currentTesti);
+}
+
+document.addEventListener("DOMContentLoaded", setupTestimonialSlider);
+

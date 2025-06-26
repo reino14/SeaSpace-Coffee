@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgba(231, 227, 227, 0.895);
+    background-color: #F5F6FF;
     font-family: "Montserrat", sans-serif;
+    
 }
 
 header{
@@ -61,8 +63,24 @@ header{
 .bg-logo-light-purple{
     background-color: #4444af;
 }
+.text-logo-light-purple{
+    color: #4444af;
+}
+
+.bg-lightest-purple{
+  background-color: #9ba4d5;
+}
+
+.bg-grey{
+  background-color: #6c74ad;
+}
+
 .text-white-purple{
     color: #e6e9f6;
+}
+
+.bg-grey-white{
+  background-color: rgba(231, 227, 227, 0.895)
 }
 /* ---------------------------NAVBAR------------------------ */
 /* Default state */
@@ -135,4 +153,180 @@ header{
     width: 50rem;
   }
 }
+
+/* ---------------------------OUR STORY------------------------ */
+.bg-ourstory {
+  background: url('./img/bg-ourstory2.png') center center / cover no-repeat;
+}
+
+/* ---------------------------OUR CAFE------------------------ */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Ketika parent di-hover, maka span berkedip */
+.group:hover .blink-text {
+  animation: blink 0.3s steps(10, start);
+}
+
+/* ===================== DAFTAR MENU GRID & FILTER ===================== */
+.menu-filter-aside {
+  background: #2c2e83;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 240px;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+  .menu-filter-aside {
+    margin-bottom: 0;
+  }
+}
+.menu-card {
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 0 rgba(44, 46, 131, 0.08);
+  padding: 0.75rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-card-dark {
+  background: #fff;
+  color: #fff;
+}
+.menu-card-desc {
+  border: 2px solid #fff;
+  background: #fff;
+  color: #2c2e83;
+  font-size: 0.95rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+.menu-card img {
+  border-radius: 0.75rem;
+}
+.menu-card .menu-title {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+.menu-card .menu-price {
+  font-weight: bold;
+  color: #fff;
+}
+.menu-card-dark .menu-title,
+.menu-card-dark .menu-price {
+  color: #fff;
+}
+.menu-card-desc img {
+  margin-top: auto;
+}
+
+/* ===================== START DAFTAR MENU DAN FILTER MOBILE===================== */
+@media (max-width: 640px) {
+  /* Filter di atas, full width */
+  .menu-filter-aside {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    border-radius: 1rem !important;
+    padding: 1rem !important;
+  }
+  /* Grid 3 kolom */
+  .bg-#2C2E83 .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+  /* Card menu kecil */
+  .menu-card-custom {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 120px !important;
+    border-radius: 1rem !important;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+    box-shadow: 0 2px 8px rgba(44, 46, 131, 0.08);
+  }
+  .menu-card-custom img {
+    width: 60px !important;
+    height: 60px !important;
+    margin-bottom: 0.25rem !important;
+    object-fit: cover !important;
+    border-radius: 0.75rem !important;
+  }
+  .menu-card-custom .font-bold {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.1rem !important;
+  }
+  .menu-card-custom .text-3xl {
+    font-size: 1.1rem !important;
+  }
+  .menu-card-custom .text-xs {
+    font-size: 0.7rem !important;
+  }
+  .menu-card-custom .bg-#2C2E83 {
+    font-size: 0.9rem !important;
+    padding: 0.1rem 0.5rem !important;
+    border-radius: 0.5rem !important;
+    margin-top: 0.2rem !important;
+  }
+  /* Hapus padding grid parent */
+  .bg-#2C2E83.rounded-3xl.p-6 {
+    padding: 0.5rem !important;
+    border-radius: 1rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-filter-aside {
+    display: none !important;
+  }
+  #filter-popup {
+    display: none;
+    background: transparent !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+  }
+  #filter-popup.active {
+    display: block !important;
+  }
+  #filter-popup > .bg-white {
+    height: 100vh !important;
+    width: 80vw !important;
+    max-width: 320px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 2rem !important;
+    border-bottom-right-radius: 2rem !important;
+    box-shadow: 2px 0 32px 0 rgba(44, 46, 131, 0.1);
+    animation: slideInLeft 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .menu-filter-aside {
+    display: block !important;
+  }
+  #filter-popup {
+    display: none !important;
+  }
+}
+/* ===================== END DAFTAR MENU GRID & FILTER ===================== */
 

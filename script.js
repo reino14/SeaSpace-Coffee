@@ -1,3 +1,12 @@
+// ==========================NAVBAR=====================
+  const navbarCheckbox = document.getElementById('navbar-open')
+  const menuLinks = document.querySelectorAll('nav ul li a')
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navbarCheckbox.checked = false; // Tutup navbar
+    })
+  })
 // ==========================HOME===============================
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
@@ -11,16 +20,16 @@ window.addEventListener('scroll', () => {
   let baseOffset;
   if (screenWidth < 640) {
     // Mobile (kurang dari sm)
-    baseOffset = 50;
+    baseOffset = 5;
   } else if (screenWidth < 768) {
     // Tablet kecil (sm)
-    baseOffset = 50;
+    baseOffset = 20;
   } else if (screenWidth < 1024) {
     // Tablet besar (md)
-    baseOffset = 170;
+    baseOffset = 180;
   } else if (screenWidth < 1440) {
     // Desktop (lg ke atas)
-    baseOffset = 240;
+    baseOffset = 250;
   } else if (screenWidth < 2560) {
     // Desktop (lg ke atas)
     baseOffset = 450;
@@ -133,13 +142,13 @@ document.addEventListener("DOMContentLoaded", function () {
 const testimonials = [
   {
     quote:
-      '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ."',
+      '"Saya benar-benar terkesan dengan SeaSpace Coffee. Tempatnya nyaman, pelayanannya ramah, dan pilihan menunya beragam. Setiap tegukan kopi di sini memberikan rasa hangat dan kaya, membuat saya betah berlama-lama. Selain itu, harganya sangat terjangkau untuk kualitas sebagus ini. Pasti saya akan kembali lagi dan merekomendasikan SeaSpace ke teman-teman! ."',
     img: "./img/testi-ariel.png",
     name: "Ariel Ramaditya",
     role: "CEO of Seaspace",
   },
   {
-    quote: "Kopinya enak, suasananya bikin betah. Pelayanan ramah banget!",
+    quote: '"Sejak pertama kali mencoba SeaSpace Coffee, saya langsung jatuh cinta. Selain rasanya yang autentik dan kaya, suasana kafenya begitu nyaman untuk bekerja maupun bersantai. Dengan harga yang bersahabat dan kualitas yang konsisten, SeaSpace benar-benar menjadi pilihan utama saya untuk menikmati secangkir kopi spesial setiap hari."',
     img: "./img/testi-ahlan.png",
     name: "Ahlan Purba",
     role: "CEO of Seaspace",

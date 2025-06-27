@@ -1,8 +1,5 @@
 🌊 SeaSpace Coffee
 
-📝 Nama UMKM
-SeaSpace Coffee
-
 💡 Konsep Website
 SeaSpace Coffee adalah sebuah UMKM berupa kedai kopi lokal yang berlokasi di kota Bogor, mengusung konsep laut sebagai inspirasi utama—tenang, terbuka, dan menenangkan. Website ini hadir untuk memperkenalkan produk-produk kopi berkualitas dengan harga terjangkau yang dapat dinikmati siapa saja. Desain visual dari website mengikuti nuansa biru laut yang kalem dan ramah di mata.
 

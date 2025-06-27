@@ -1,4 +1,4 @@
-![SeaSpace Logo](./img/logo2.png) SeaSpace Coffee
+🌊 SeaSpace Coffee
 📝 Nama UMKM
 SeaSpace Coffee
 

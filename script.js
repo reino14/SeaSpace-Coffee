@@ -156,13 +156,13 @@ const testimonials = [
       '"Saya benar-benar terkesan dengan SeaSpace Coffee. Tempatnya nyaman, pelayanannya ramah, dan pilihan menunya beragam. Setiap tegukan kopi di sini memberikan rasa hangat dan kaya, membuat saya betah berlama-lama. Selain itu, harganya sangat terjangkau untuk kualitas sebagus ini. Pasti saya akan kembali lagi dan merekomendasikan SeaSpace ke teman-teman! ."',
     img: "./img/testi-ariel.png",
     name: "Ariel Ramaditya",
-    role: "CEO of Seaspace",
+    role: "Youtuber",
   },
   {
     quote: '"Sejak pertama kali mencoba SeaSpace Coffee, saya langsung jatuh cinta. Selain rasanya yang autentik dan kaya, suasana kafenya begitu nyaman untuk bekerja maupun bersantai. Dengan harga yang bersahabat dan kualitas yang konsisten, SeaSpace benar-benar menjadi pilihan utama saya untuk menikmati secangkir kopi spesial setiap hari."',
-    img: "./img/testi-ahlan.png",
-    name: "Ahlan Purba",
-    role: "CEO of Seaspace",
+    img: "./img/testi-reino.png",
+    name: "Reino Aimar Rafif",
+    role: "Influencer Tiktok",
   },
 ];
 let currentTesti = 0;

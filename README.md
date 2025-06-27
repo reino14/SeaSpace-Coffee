@@ -6,6 +6,7 @@ SeaSpace Coffee adalah sebuah UMKM berupa kedai kopi lokal yang berlokasi di kot
 Website SeaSpace tidak hanya menampilkan informasi produk, tapi juga menceritakan latar belakang brand, promo yang sedang berjalan, lokasi kedai, dan testimoni pelanggan. Dengan pendekatan storytelling dan desain modern, website ini diharapkan dapat memperkuat citra SeaSpace Coffe dan meningkatkan konektivitas dengan konsumen secara digital.
 
 🌟 Fitur Unggulan
+
 -Desain yang unik mengusung tema laut dan fun to explore
 
 -Animasi pada homepage yang menarik
@@ -17,6 +18,7 @@ Website SeaSpace tidak hanya menampilkan informasi produk, tapi juga menceritaka
 -Testimoni pelanggan
 
 💻 Teknologi yang Digunakan
+
 -HTML5 untuk struktur konten
 
 -Tailwind CSS untuk styling modern dan responsif

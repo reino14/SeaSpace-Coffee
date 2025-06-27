@@ -27,7 +27,7 @@ header{
 .bg-custom {
     position: relative;
     overflow: hidden;
-    background-image: url('./img/bg-home2.png');
+    background-image: url('./img/bg/bg-home2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -156,7 +156,7 @@ header{
 
 /* ---------------------------OUR STORY------------------------ */
 .bg-ourstory {
-  background: url('./img/bg-ourstory2.png') center center / cover no-repeat;
+  background: url('./img/bg/bg-ourstory2.png') center center / cover no-repeat;
 }
 
 /* ---------------------------OUR CAFE------------------------ */

@@ -1,4 +1,15 @@
 // ==========================NAVBAR=====================
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 50) {
+      header.classList.add('shadow-md', 'backdrop-blur-md');
+      header.style.backgroundColor = 'rgba(44, 47, 139, 0.85)'; // #2c2f8b + opacity
+    } else {
+      header.classList.remove('shadow-md', 'backdrop-blur-md');
+      header.style.backgroundColor = 'transparent';
+    }
+  });
+
   const navbarCheckbox = document.getElementById('navbar-open')
   const menuLinks = document.querySelectorAll('nav ul li a')
 

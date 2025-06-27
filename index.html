@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://cdn.tailwindcss.com"></script>
       <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>SeaSpace</title>
     <link rel="icon" href="./img/logo2.png" type="image/png" />
     <link
       rel="stylesheet"
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<header class="fixed top-0 left-0 w-full z-50 bg-transparent px-4">
+<header class="fixed top-0 left-0 w-full z-50 bg-transparent px-4 transition-all duration-500 pb-4" id="main-header">
   <div class="mx-auto max-w-screen-lg xl:max-w-screen-xl flex justify-between items-center h-20 relative">
 
     <!-- Logo -->
@@ -37,16 +37,16 @@
     <!-- Mobile nav -->
     <nav
       class=" fixed top-0 right-0 h-screen w-full bg-very-light-purple sm:bg-very-light-purple text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 sm:static sm:translate-x-0 sm:flex sm:items-center sm:h-auto sm:bg-transparent sm:w-auto sm:text-white z-40">
-      <ul class="flex flex-col gap-y-6 p-6 pt-24 sm:flex-row sm:gap-x-8 sm:p-0 sm:pt-0">
-        <li><a href="#home" class="text-white-purple hover:text-indigo-600 transition-all duration-400 font-bold text-xs">HOME</a></li>
-        <li><a href="#promo" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">PROMO</a></li>
-        <li><a href="#products" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">PRODUCTS</a></li>
-        <li><a href="#story" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">OUR STORY</a></li>
-        <li><a href="#cafe" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">OUR CAFE</a></li>
-        <li><a href="#testimonial" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">REVIEW</a></li>
-        <li><a href="#contact" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-xs">CONTACT</a></li>
+      <ul class="flex flex-col gap-y-6 p-6 pt-24 sm:flex-row sm:gap-x-8 sm:p-0 sm:pt-4">
+        <li><a href="#home" class="text-white-purple hover:text-indigo-600 transition-all duration-400 font-bold text-sm md:text-sm">HOME</a></li>
+        <li><a href="#promo" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-sm">PROMO</a></li>
+        <li><a href="#products" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-sm">PRODUCTS</a></li>
+        <li><a href="#story" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-sm">OUR STORY</a></li>
+        <li><a href="#cafe" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-sm">OUR CAFE</a></li>
+        <li><a href="#testimonial" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-sm">REVIEW</a></li>
+        <li><a href="#contact" class="text-white-purple hover:text-indigo-600 transition-all duration-400  font-bold text-sm md:text-sm">CONTACT</a></li>
       </ul>
-      <img src="./img/wave.png" alt="ombak" class=" sm:hidden absolute w-96 bottom-0">
+      <img src="./img/wave.png" alt="gambar ombak" class=" sm:hidden absolute w-96 bottom-0">
     </nav>
   </div>
 </header>
@@ -61,7 +61,7 @@
         <img
             class="w-60 sm:w-60 lg:w-80 2xl:w-96"
             src="./img/tangan-kiri.png"
-            alt="gambar kopi kiri"
+            alt="gambar kopi susu tangan kiri"
         />
         </div>
 
@@ -69,7 +69,7 @@
         <img
             class="w-48 lg:w-60 2xl:w-80"
             src="./img/tangan-kanan.png"
-            alt="gambar kopi kanan"
+            alt="gambar kopi susu tangan kanan"
         />
         </div>
 
@@ -77,7 +77,7 @@
         <img
             class="w-custom"
             src="./img/wave.png"
-            alt="gambar kopi kanan"
+            alt="gambar ombak kiri"
         />
         </div>
 
@@ -85,7 +85,7 @@
         <img
             class="w-custom"
             src="./img/wave-right.png"
-            alt="gambar kopi kanan"
+            alt="gambar ombak kanan"
         />
         </div>
     </div>
@@ -96,7 +96,7 @@
     <section id="promo" class="w-full py-0" >
       <!-- Banner News -->
       <div class="w-full relative">
-        <img src="./img/bg-home2.png" alt="News Banner" class="w-full h-36 object-cover object-center rounded-b-3xl">
+        <img src="./img//bg/bg-home2.png" alt="Promo Banner" class="w-full h-36 object-cover object-center rounded-b-3xl">
         <div class="absolute inset-0 bg-[#2C2E83]/80 flex items-center justify-center">
           <h2 class="text-white text-3xl  sm:text-4xl lg:text-6xl font-extrabold md:pl-8 drop-shadow-lg tracking-wide" style="font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em;">LATEST PROMO!</h2>
         </div>
@@ -106,7 +106,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Card 1 -->
           <div class="bg-white rounded-2xl shadow p-2 flex flex-col border border-gray-200">
-            <img src="./img/poster-1.png" alt="news1" class="rounded-t-2xl w-full h-cover object-cover mb-2">
+            <img src="./img/poster/poster-1.png" alt="poster promo 1" class="rounded-t-2xl w-full h-cover object-cover mb-2">
             <div class="px-2 pb-2 flex-1 flex flex-col">
               <h3 class="font-bold text-base text-black mb-1 leading-tight">Paket “Ngopi Pagi” hanya 25K bisa Nikmatin Donut Kampung dengan Bonus Minum</h3>
               <p class="text-gray-500 text-sm mb-2 flex-1">Masih Pagi Enaknya Ngopi, Jangan Lupa Donut Kampungnya Juga!</p>
@@ -115,7 +115,7 @@
           </div>
           <!-- Card 2 -->
           <div class="bg-white rounded-2xl shadow p-2 flex flex-col border border-gray-200">
-            <img src="./img/poster-2.png" alt="news2" class="rounded-t-2xl w-full h-86 object-cover mb-2">
+            <img src="./img/poster/poster-2.png" alt="poster promo 2" class="rounded-t-2xl w-full h-86 object-cover mb-2">
             <div class="px-2 pb-2 flex-1 flex flex-col">
               <h3 class="font-bold text-base text-black mb-1 leading-tight">Seaspace Nyediain Bundling Es Coklat Dengan Donut Kentang Cuman 25k!</h3>
               <p class="text-gray-500 text-sm mb-2 flex-1">Kombinasi Paling Cocok Antara Es Coklat Dengan Donut Kentang, Ayo Buru Beli!</p>
@@ -124,7 +124,7 @@
           </div>
           <!-- Card 3 -->
           <div class="bg-white rounded-2xl shadow p-2 flex flex-col border border-gray-200">
-            <img src="./img/poster-3.png" alt="news3" class="rounded-t-2xl w-full h-cover object-cover mb-2">
+            <img src="./img/poster/poster-3.png" alt="poster promo 3" class="rounded-t-2xl w-full h-cover object-cover mb-2">
             <div class="px-2 pb-2 flex-1 flex flex-col">
               <h3 class="font-bold text-base text-black mb-1 leading-tight">Lagi Ada Acara Night Run Di SeaSpace Untuk Umum, Jangan Lupa Datang!</h3>
               <p class="text-gray-500 text-sm mb-2 flex-1">Buat Sobat Sea Space Yang Hobinya Lari Harus Banget Nih Ramein, Buruan Dateng!</p>
@@ -137,7 +137,7 @@
     <!-- SECTION NEWS END -->
 
       <!------------------------------------------------------------------PRODUCTS------------------------------------------------------------------>
-    <section class="w-full py-8 pt-16 pb-28 bg-[url('./img/bg-home2.png')] bg-center bg-cover bg-no-repeat" id="products">
+    <section class="w-full py-8 pt-16 pb-28 bg-[url('./img/bg/bg-home2.png')] bg-center bg-cover bg-no-repeat" id="products" alt="background seaspace">
       <div class="swiper mySwiper">
         <div class="flex justify-center mb-10">
           <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-3xl">
@@ -148,35 +148,35 @@
         <div class="swiper-wrapper">
           <!-- Ganti isi per-slide sesuai kebutuhan -->
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/chocolate-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+            <img src="./img/produk/chocolate-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
               <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
                   Chocolate SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/lemontea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+            <img src="./img/produk/lemontea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Lemontea SeaSpace" />
               <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
                   Lemontea SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/kopsus-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+            <img src="./img/produk/kopsus-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Kopi Susu SeaSpace" />
               <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
                   Kopi Susu SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/greentea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+            <img src="./img/produk/greentea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Greentea SeaSpace" />
               <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
                   Greentea SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/blackforest-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+            <img src="./img/produk/blackforest-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Blackforest SeaSpace" />
               <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
                   Blackforest SeaSpace
               </h1>
@@ -189,28 +189,28 @@
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/lemontea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+            <img src="./img/produk/lemontea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Lemontea SeaSpace" />
               <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
                   Lemontea SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/kopsus-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+            <img src="./img/produk/kopsus-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Kopi Susu SeaSpace" />
               <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
                   Kopi Susu SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/greentea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Chocolate SeaSpace" />
+            <img src="./img/produk/greentea-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Greentea SeaSpace" />
               <h1 class="bg-very-light-purple text-white font-bold p-3 rounded-3xl text-sm">
                   Greentea SeaSpace
               </h1>
           </div>
 
           <div class="swiper-slide bg-[#F5F6FF] rounded-2xl p-4 flex flex-col items-center text-white">
-            <img src="./img/blackforest-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Choco Lava" />
+            <img src="./img/produk/blackforest-best.png" class="rounded-xl mb-2 w-54 h-64 object-cover hover:scale-105 transition-all duration-300 ease-in-out" alt="Blackforest SeaSpace" />
               <h1 class="bg-very-light-purple  text-white font-bold p-3 rounded-3xl text-sm">
                   Blackforest SeaSpace
               </h1>
@@ -275,7 +275,7 @@
               <!-- Card 1 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee,milk">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/kopsus.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/kopsus.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Kopi <br> Susu</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -287,13 +287,13 @@
                 </div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-white  text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   "Kopi susu dengan sentuhan manis alami. Nikmat, lembut, dan khas!"<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                  <img src="./img/wave.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 2 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/chocolate.png" alt="Chocolate" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/chocolate.png" alt="Chocolate" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Choco <br> late</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -310,7 +310,7 @@
               <!-- Card 3 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="signature">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/blackforest.png" alt="Blackforest" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/blackforest.png" alt="Blackforest" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Black <br> forest</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -328,7 +328,7 @@
               <!-- Card 4 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/greentea.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/greentea.png" alt="Greentea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Green<br>Tea</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -346,7 +346,7 @@
               <!-- Card 5 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/lemontea.png" alt="Lemon Tea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/lemontea.png" alt="Lemon Tea" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Lemon<br>Tea</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -364,7 +364,7 @@
               <!-- Card 6 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/blueocean.png" alt="Blue Ocean" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/blueocean.png" alt="Ocean Blue" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Ocean<br>Blue</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -382,7 +382,7 @@
               <!-- Card 7 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="coffee">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/americano.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/americano.png" alt="Americano" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Ameri<br>cano</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -393,13 +393,13 @@
                   </div>
                 </div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">"Kopi hitam pekat untuk kamu yang suka cita rasa kuat dan murni."<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                  <img src="./img/wave.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
                 </div>
               </div>
               <!-- Card 8 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="milk">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/soon.png" alt="Red Velvet" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/soon.png" alt="Red Velvet" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Red<br>Velvet</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -416,7 +416,7 @@
               <!-- Card 9 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/soon.png" alt="Passion Fruit" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/soon.png" alt="Passion Fruit" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Passion<br>Fruit</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -433,7 +433,7 @@
               <!-- Card 10 -->
               <div class="min-w-[125px] flex flex-col items-center justify-between bg-white border-4 border-[#4B4E9C] rounded-2xl p-3 w-full overflow-hidden transition-all duration-200 group relative" data-category="tea">
                 <div class="flex flex-col items-center w-full group-hover:opacity-0 transition-opacity duration-200 z-10">
-                  <img src="./img/soon.png" alt="Sea Space Coffee" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
+                  <img src="./img/produk/soon.png" alt="Sea Salt" class="w-28 h-28 object-cover rounded-xl mb-1 mt-2" />
                   <div class="flex w-full justify-between items-end mt-1">
                     <span class="font-bold text-[#4B4E9C] text-left text-base leading-tight text-sm lg:text-lg mt-1">Sea<br>Salt</span>
                     <span class="font-bold text-[#4B4E9C] text-right text-base flex items-end gap-1 whitespace-nowrap">
@@ -444,7 +444,7 @@
                   </div>
                 </div>
                 <div class="absolute inset-0 flex flex-col items-center justify-center bg-white text-[#2C2E83] text-center text-sm z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"> "Masih rahasia nih ditunggu ya..."<br>~MinSea~
-                  <img src="./img/wave.png" alt="wave" class="w-12 mx-auto mt-2" />
+                  <img src="./img/wave.png" alt="gambar ombak" class="w-12 mx-auto mt-2" />
                 </div>
             </div>
           </div>
@@ -454,7 +454,7 @@
 
     <!------------------------------------------------------------------OUR STORY------------------------------------------------------------------>
     <div class="flex justify-center flex-col items-center md:px-40 mb-4" id="story">
-      <img src="./img/judul-story.png" alt="" class="w-64 md:w-96 mb-1 pt-20">
+      <img src="./img/judul/judul-story.png" alt="judul story" class="w-64 md:w-96 mb-1 pt-20">
         <p class="text-center text-xs md:text-lg">
           The Journey of SeaSpace and Our Passion for Coffee</p>
     </div>
@@ -477,7 +477,7 @@
     <!------------------------------------------------------------------OUR CAFE------------------------------------------------------------------>
     <section class="px-10 md:px-5 mb-20" id="cafe">
       <div class="flex justify-center flex-col items-center md:px-72">
-        <img src="./img/judul-cafe.png" alt="" class="w-40 md:w-64 mb-1 pt-10">
+        <img src="./img/judul/judul-cafe.png" alt="judul cafe" class="w-40 md:w-64 mb-1 pt-10">
         <p class="text-center text-xs md:text-lg">
           We currently have two cafes located at Sempur & Salak </p>
       </div>
@@ -491,7 +491,7 @@
             </span>
 
             <!-- Gambar -->
-            <img src="./img/cafe-1.png" alt="seaspace sempur" width="380px">
+            <img src="./img/bg/cafe-1.png" alt="seaspace sempur" width="380px">
 
             <!-- Button -->
             <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300">
@@ -508,7 +508,7 @@
             </span>
 
             <!-- Gambar -->
-            <img src="./img/cafe-2.png" alt="seaspace salak" width="380px">
+            <img src="./img/bg/cafe-2.png" alt="seaspace salak" width="380px">
 
             <!-- Button -->
             <button class="bg-very-light-purple py-2 px-4 text-md rounded-3xl text-white font-bold mt-4 mb-10 md:mb-0 hover:bg-white hover:text-slate-400 transition-colors duration-300">
@@ -524,7 +524,7 @@
 
     <!------------------------------------------------------------------TESTIMONIAL------------------------------------------------------------------>
     <div class="flex justify-center flex-col items-center md:px-40" id="testimonial">
-      <img src="./img/judul-testimoni.png" alt="" class="w-64 md:w-96 pt-20">
+      <img src="./img/judul/judul-testimoni.png" alt="judul testimonial" class="w-64 md:w-96 pt-20">
         <p class="text-center text-xs md:text-lg mt-1">
           What Our Customer Has To Say About SeaSpace</p>
     </div>
@@ -533,7 +533,7 @@
         <div class="relative">
           <div class=" bg-very-light-purple rounded-[2.5rem] p-8 md:p-10 flex flex-col md:flex-row items-center justify-between relative overflow-hidden min-h-[480px] md:min-h-[410px]">
             <!-- Ornamen kiri bawah -->
-            <img src="./img/bg-testi.png" alt="ornamen" class="absolute left-0 bottom-0 w-1/3 min-w-[120px] max-w-[520px] opacity-60 pointer-events-none select-none" style="z-index:1;">
+            <img src="./img/bg-testi.png" alt="profile testimonial 1" class="absolute left-0 bottom-0 w-1/3 min-w-[120px] max-w-[520px] opacity-60 pointer-events-none select-none" style="z-index:1;">
             <!-- Tombol panah kiri -->
             <button id="testimonial-left" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/60 hover:bg-white text-[#5B4DC2] rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition"><svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
             <!-- Konten kiri: judul dan kutipan -->
@@ -544,7 +544,7 @@
             <!-- Konten kanan: foto profil dan nama -->
             <div class="flex flex-col items-center z-10 mt-8 md:mt-0 md:ml-16 md:mr-10">
               <div class="w-32 h-32 md:w-56 md:h-56 rounded-full border-white flex items-center justify-center overflow-hidden bg-white">
-                <img id="testimonial-img" src="" alt="Foto Testimoni" class="w-full h-full object-cover rounded-full">
+                <img id="testimonial-img" src="" alt="profile testimonial 2" class="w-full h-full object-cover rounded-full">
               </div>
               <div class="bg-white rounded-xl px-6 py-3 shadow text-center">
                 <div id="testimonial-name" class="font-bold text-[#2C2E83] text-lg md:text-xl"></div>
@@ -559,15 +559,12 @@
         </div>
       </div>
     </section>
-    <!-- SECTION TESTIMONI END -->
-
-
   <!------------------------------------------------------------------FOOTER------------------------------------------------------------------>
   <footer id="contact" class="bg-very-light-purple text-white py-8 px-6 gap-y-4  rounded-t-2xl pr-16 sm:pr-5">
 
     <!--MOBILE-->
     <div class="md:row-span-2 md:col-span-1 sm:hidden block">
-      <img class="w-32 sm:w-48 sm:h-48" src="./img/logo2.png" alt="" />
+      <img class="w-32 sm:w-48 sm:h-48" src="./img/logo2.png" alt="Logo SeaSpace" />
     </div>
     <div class="sm:hidden flex flex-col py-2">
       <p class="text-white text-justify text-xs">Jl. Sempur No.23, RT.03/RW.01, Sempur, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16129</p>
@@ -622,7 +619,7 @@
       
         <!-- Bagian paling luar sudah ok -->
          <div class="hidden sm:block max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
-            <img class="w-32 sm:w-24 sm:h-24" src="./img/logo2.png" alt="" />
+            <img class="w-32 sm:w-24 sm:h-24" src="./img/logo2.png" alt="Logo SeaSpace" />
          </div>
         <div class="max-w-screen-xl mx-auto grid grid-cols-6 gap-6 text-sm items-start px-6">
 
